@@ -47,6 +47,35 @@ What judges should notice:
 - the personalization panel shows how the system tracks useful shopping signals
 - the product structure is meant to reflect a marketplace with many categories, similar to eBay
 
+## How To Run The Application
+
+The quickest way to run the application locally is:
+
+```bash
+./run.sh
+```
+
+This starts a simple local web server from the main project folder.
+
+Then open:
+
+```text
+http://localhost:4173/demo.html
+```
+
+If needed, you can also open `demo.html` directly in a browser, but `run.sh` is the recommended method.
+
+## How To Tell The App Started Successfully
+
+The app started successfully if:
+
+- the terminal shows that a local server is running on port `4173`
+- `http://localhost:4173/demo.html` loads in your browser
+- the `inDepth for eBay` header and logo appear
+- the `inDepth AI Search Tool` section is visible
+- text search works when `Send Message` is clicked
+- the `Human Agent` button opens the support panel
+
 ## Key Demo Areas
 
 - `inDepth AI Search Tool`: the main user-facing discovery and recommendation flow
@@ -61,3 +90,4 @@ What judges should notice:
 - `demo-app.js` - live application logic
 - `demo.js` - synced backup copy of the demo logic
 - `api/audit.js` - optional future AI/serverless integration
+- `run.sh` - quick local startup script
