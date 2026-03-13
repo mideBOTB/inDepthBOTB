@@ -13,6 +13,14 @@ It is designed to show how users can:
 
 The purpose of the application is to demonstrate a smarter, more personalized support and discovery flow for online shopping. It highlights how a user can move from confusion or broad search intent to clearer recommendations, brand filtering, category browsing, and human support when needed.
 
+## Live Demo
+
+The deployed version of the solution is available at:
+
+`https://mide.mideolafusi.workers.dev`
+
+This live link is the easiest way for judges or audience members to use the app on a phone or another device. It can also be turned into a QR code for quick mobile access during the presentation.
+
 ## Tech And Frameworks Used
 
 This project is currently built as a lightweight front-end prototype using:
@@ -64,6 +72,8 @@ http://localhost:4173/demo.html
 ```
 
 If needed, you can also open `demo.html` directly in a browser, but `run.sh` is the recommended method.
+
+For judging and live presentation use, the deployed version at `https://mide.mideolafusi.workers.dev` is the recommended experience.
 
 ## How To Tell The App Started Successfully
 
