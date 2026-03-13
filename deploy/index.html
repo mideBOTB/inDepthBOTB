@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>inDepth for eBay Demo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Source+Serif+4:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./demo.css" />
+  </head>
+  <body>
+    <main class="demo-app">
+      <section class="demo-hero">
+        <div class="hero-brand">
+          <img
+            class="hero-logo"
+            src="./indepth-logo.PNG"
+            alt="inDepth logo"
+          />
+        </div>
+        <div class="hero-copy">
+          <p class="eyebrow">Standalone Product Demo</p>
+          <h1>inDepth for eBay</h1>
+          <p class="hero-text">
+            An AI-powered shopping support experience that helps streamline the
+            path to purchase. It gives consumers clearer recommendations,
+            faster product discovery, and easier access to human help so they
+            can shop with more confidence and complete purchases more smoothly.
+          </p>
+        </div>
+        <a class="back-link" href="./index.html">Open pitch deck</a>
+      </section>
+
+      <section class="demo-grid">
+        <article class="phone-frame">
+          <div class="phone-screen">
+            <header class="screen-header">
+              <div>
+                <p class="eyebrow">Mobile Experience</p>
+                <h2>inDepth AI Search Tool</h2>
+              </div>
+              <span id="system-mode" class="status-pill">Ready</span>
+            </header>
+
+            <section class="card">
+              <div class="card-heading">
+                <span class="label">Step 1</span>
+                <strong>Upload AI Evidence</strong>
+              </div>
+              <label class="upload-zone upload-zone-disabled" for="demo-image-upload">
+                <input id="demo-image-upload" type="file" accept="image/*" disabled />
+                <span>Upload a screenshot of an AI answer, product page, or recommendation result</span>
+              </label>
+              <div id="demo-image-preview" class="image-preview empty image-preview-disabled">
+                <span id="demo-preview-text">Image search is locked in this demo</span>
+                <img id="demo-preview-image" alt="Uploaded preview" />
+              </div>
+            </section>
+
+            <section class="card">
+              <div class="card-heading">
+                <span class="label">Step 2</span>
+                <strong>Chat With the Assistant</strong>
+              </div>
+              <form id="demo-chat-form" class="stack-form">
+                <label>
+                  User ID
+                  <input
+                    id="demo-user-id"
+                    name="userId"
+                    type="text"
+                    placeholder="guest-demo"
+                  />
+                </label>
+                <label>
+                  What do you need?
+                  <input
+                    id="demo-query"
+                    name="query"
+                    type="text"
+                    placeholder="I only have $500, and I need a laptop"
+                  />
+                </label>
+                <label>
+                  Optional category
+                  <input
+                    id="demo-category"
+                    name="category"
+                    type="text"
+                    placeholder="laptops, watches, sneakers"
+                  />
+                </label>
+                <label>
+                  Optional brand
+                  <input
+                    id="demo-brand"
+                    name="brand"
+                    type="text"
+                    placeholder="Apple, Nike, Bose, Jordan"
+                  />
+                </label>
+                <button class="primary-button" type="submit">
+                  Send Message
+                </button>
+              </form>
+            </section>
+
+            <section class="card">
+              <div class="card-heading">
+                <span class="label">Memory</span>
+                <strong>Recent Searches</strong>
+              </div>
+              <p class="memory-copy">
+                The demo remembers recent searches and uses them to personalize the next recommendation.
+              </p>
+              <div id="search-history" class="history-list"></div>
+            </section>
+          </div>
+        </article>
+
+        <section class="experience-panel">
+          <article class="surface">
+            <div class="panel-heading">
+              <div>
+                <p class="eyebrow">Live Chat</p>
+                <h3>Conversation</h3>
+              </div>
+              <span id="analysis-status" class="status-pill neutral-pill">
+                Waiting
+              </span>
+            </div>
+            <div id="chat-transcript" class="chat-transcript">
+              <article class="chat-bubble assistant">
+                Welcome to inDepth for eBay. Tell me what you need, and I will
+                recommend products or answer common eBay questions.
+              </article>
+            </div>
+          </article>
+
+          <article class="surface">
+            <div class="panel-heading">
+              <div>
+                <p class="eyebrow">Product Results</p>
+                <h3>Recommendations</h3>
+              </div>
+              <strong id="results-count">0 results</strong>
+            </div>
+            <div id="demo-results" class="results-list"></div>
+          </article>
+
+          <article class="surface insights-panel">
+            <div class="panel-heading">
+              <div>
+                <p class="eyebrow">Presenter View</p>
+                <h3>Personalization Signals</h3>
+              </div>
+            </div>
+            <div class="insight-grid">
+              <article class="insight-card">
+                <span class="label">Favorite Category</span>
+                <p id="insight-need">Waiting for input.</p>
+              </article>
+              <article class="insight-card">
+                <span class="label">Preferred Brand</span>
+                <p id="insight-fit">Waiting for input.</p>
+              </article>
+              <article class="insight-card">
+                <span class="label">Budget Memory</span>
+                <p id="insight-outcome">Waiting for input.</p>
+              </article>
+            </div>
+          </article>
+        </section>
+      </section>
+    </main>
+    <div class="floating-agent-access">
+      <p id="agent-status-copy" class="agent-status-copy hidden">
+        Human agent access requested. A support specialist can now step in to
+        clarify recommendations and help finish the purchase.
+      </p>
+      <button id="agent-button" class="primary-button floating-agent-button" type="button">
+        Human Agent
+      </button>
+      <section id="agent-panel" class="agent-panel hidden">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">Human Support</p>
+            <h3>Live Agent</h3>
+          </div>
+          <button id="agent-close-button" class="agent-close-button" type="button">
+            Close
+          </button>
+        </div>
+        <div id="agent-transcript" class="chat-transcript agent-transcript">
+          <article class="chat-bubble assistant">
+            Hi, I am your human agent. Tell me what you need, what your budget is,
+            or where you want more clarification, and I will help from here.
+          </article>
+        </div>
+        <form id="agent-chat-form" class="stack-form">
+          <label>
+            What do you need help with?
+            <input
+              id="agent-query"
+              name="agentQuery"
+              type="text"
+              placeholder="I need a laptop under $400 and I want to talk to a person"
+            />
+          </label>
+          <label>
+            Optional category
+            <input
+              id="agent-category"
+              name="agentCategory"
+              type="text"
+              placeholder="laptops, shoes, phones"
+            />
+          </label>
+          <label>
+            Optional brand
+            <input
+              id="agent-brand"
+              name="agentBrand"
+              type="text"
+              placeholder="Apple, Nike, Bose, Jordan"
+            />
+          </label>
+          <button class="primary-button" type="submit">
+            Send to Human Agent
+          </button>
+        </form>
+      </section>
+    </div>
+
+    <script src="./demo-app.js"></script>
+  </body>
+</html>

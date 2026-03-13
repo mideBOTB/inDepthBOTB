@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>inDepth for eBay Pitch Deck</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Source+Serif+4:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <aside class="sidebar">
+        <div>
+          <p class="eyebrow">2026 HBCU Battle of the Brains</p>
+          <h1>inDepth for eBay</h1>
+          <p class="sidebar-copy">
+            Present the business story here, then send the crowd to the live demo experience.
+          </p>
+        </div>
+
+        <nav class="section-nav" aria-label="Section navigation">
+          <a href="#hero">Overview</a>
+          <a href="#mobile-demo">Mobile Demo</a>
+          <a href="#problem">Problem</a>
+          <a href="#solution">Solution</a>
+          <a href="#crowd">Crowd</a>
+          <a href="#market">Market</a>
+          <a href="#business-model">Model</a>
+          <a href="#traction">Traction</a>
+          <a href="#impact">Impact</a>
+          <a href="#team">Team</a>
+          <a href="#ask">The Ask</a>
+        </nav>
+
+        <div class="sidebar-actions">
+          <a class="primary-button link-button" href="./demo.html">Open Live Demo</a>
+          <button id="edit-toggle" class="primary-button" type="button">
+            Open Editor
+          </button>
+          <button id="reset-button" class="ghost-button" type="button">
+            Reset Demo Content
+          </button>
+        </div>
+      </aside>
+
+      <main class="content">
+        <section id="hero" class="panel hero-panel">
+          <div class="hero-copy">
+            <p class="eyebrow" data-field="tagline"></p>
+            <h2 data-field="ventureName"></h2>
+            <p class="lede" data-field="oneLiner"></p>
+          </div>
+          <div class="hero-metrics">
+            <article class="metric-card">
+              <span class="metric-label">Target user</span>
+              <strong data-field="targetAudience"></strong>
+            </article>
+            <article class="metric-card">
+              <span class="metric-label">Business model</span>
+              <strong data-field="businessModel"></strong>
+            </article>
+            <article class="metric-card">
+              <span class="metric-label">Current stage</span>
+              <strong data-field="stage"></strong>
+            </article>
+          </div>
+        </section>
+
+        <section id="mobile-demo" class="panel mobile-demo-panel">
+          <div class="section-heading">
+            <p class="eyebrow">Live Experience</p>
+            <h3>Separate Crowd Demo</h3>
+          </div>
+
+          <div class="mobile-demo-layout">
+            <article class="phone-shell">
+              <div class="phone-notch"></div>
+              <div class="phone-screen">
+                <header class="app-header">
+                  <div>
+                    <p class="eyebrow">Mobile app</p>
+                    <h4 data-field="mobileAppTitle"></h4>
+                  </div>
+                  <span class="status-pill online-pill">Live</span>
+                </header>
+
+                <section class="upload-card">
+                  <div>
+                    <span class="metric-label">Demo preview</span>
+                    <p class="upload-copy" data-field="mobileIntro"></p>
+                  </div>
+                  <label class="upload-dropzone" for="image-upload">
+                    <input id="image-upload" type="file" accept="image/*" />
+                    <span>Tap to upload or take a photo</span>
+                  </label>
+                  <div id="image-preview" class="image-preview empty">
+                    <span id="preview-text">No image selected yet</span>
+                    <img id="preview-image" alt="Uploaded preview" />
+                  </div>
+                </section>
+
+                <section class="chat-card">
+                  <div class="chat-heading">
+                    <div>
+                      <span class="metric-label">Assistant</span>
+                      <h4>AI Shopping Audit</h4>
+                    </div>
+                  </div>
+
+                  <form id="chat-form" class="chat-form">
+                    <label>
+                      What is being audited?
+                      <input
+                        id="chat-query"
+                        name="query"
+                        type="text"
+                        placeholder="Best refurbished laptops under $500, top vintage watches..."
+                      />
+                    </label>
+                    <button class="primary-button" type="submit">
+                      Preview Audit
+                    </button>
+                  </form>
+
+                  <div id="chat-response" class="chat-response">
+                    This deck previews the live app flow. Use the separate demo for the full interactive experience.
+                  </div>
+                </section>
+
+                <section class="results-card">
+                  <div class="results-heading">
+                    <span class="metric-label">Audit outputs</span>
+                    <strong id="result-count">0 actions</strong>
+                  </div>
+                  <div id="result-list" class="result-list"></div>
+                </section>
+              </div>
+            </article>
+
+            <article class="story-card presenter-card">
+              <h4>Presenter Panel</h4>
+              <p data-field="mobilePresenterCue"></p>
+              <div class="presenter-grid">
+                <article class="output-card">
+                  <span class="metric-label">Why it works on stage</span>
+                  <p data-field="mobileWhyItWorks"></p>
+                </article>
+                <article class="output-card">
+                  <span class="metric-label">Phone-friendly flow</span>
+                  <p data-field="mobileFlow"></p>
+                </article>
+              </div>
+              <div class="qr-card">
+                <span class="metric-label">Audience entry</span>
+                <strong data-field="qrPrompt"></strong>
+                <p>Show a QR code here during the pitch so the crowd can join on their phones.</p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="problem" class="panel">
+          <div class="section-heading">
+            <p class="eyebrow">Section 01</p>
+            <h3>The Problem</h3>
+          </div>
+          <div class="two-column">
+            <article class="story-card">
+              <h4>Core challenge</h4>
+              <p data-field="problem"></p>
+            </article>
+            <article class="story-card accent-card">
+              <h4>Why now</h4>
+              <p data-field="urgency"></p>
+            </article>
+          </div>
+        </section>
+
+        <section id="crowd" class="panel crowd-panel">
+          <div class="section-heading">
+            <p class="eyebrow">Crowd Engagement</p>
+            <h3>Audience Interaction</h3>
+          </div>
+
+          <div class="generator-layout">
+            <article class="story-card">
+              <h4>Live audience prompt</h4>
+              <p data-field="crowdPrompt"></p>
+              <form id="crowd-form" class="scenario-form">
+                <label>
+                  Audience name or seat
+                  <input
+                    id="crowd-name"
+                    name="name"
+                    type="text"
+                    placeholder="Guest 12 or Ayomide"
+                  />
+                </label>
+                <label>
+                  Reaction
+                  <textarea
+                    id="crowd-reaction"
+                    name="reaction"
+                    rows="3"
+                    placeholder="What risk, recommendation, or feature stood out to you?"
+                  ></textarea>
+                </label>
+                <button class="primary-button" type="submit">Submit Reaction</button>
+              </form>
+            </article>
+
+            <article class="story-card">
+              <div class="results-heading">
+                <div>
+                  <h4>Live response wall</h4>
+                  <p class="builder-copy">As the crowd reacts to the product story or live app, their responses appear here.</p>
+                </div>
+                <strong id="crowd-count">0 responses</strong>
+              </div>
+              <div id="crowd-list" class="crowd-list"></div>
+            </article>
+          </div>
+        </section>
+
+        <section id="solution" class="panel">
+          <div class="section-heading">
+            <p class="eyebrow">Section 02</p>
+            <h3>The Solution</h3>
+          </div>
+          <div class="two-column">
+            <article class="story-card wide-card">
+              <h4>Product or service</h4>
+              <p data-field="solution"></p>
+            </article>
+            <article class="story-card">
+              <h4>Value proposition</h4>
+              <p data-field="valueProposition"></p>
+            </article>
+          </div>
+        </section>
+
+        <section id="demo" class="panel demo-panel">
+          <div class="section-heading">
+            <p class="eyebrow">Live Demo</p>
+            <h3>How the Experience Works</h3>
+          </div>
+
+          <div class="demo-layout">
+            <article class="demo-stage">
+              <div class="demo-stage-header">
+                <div>
+                  <p class="eyebrow">Audience View</p>
+                  <h4 data-field="demoTitle"></h4>
+                </div>
+                <span id="demo-status" class="status-pill">Step 1 of 3</span>
+              </div>
+
+              <div class="demo-screen">
+                <div class="screen-topbar">
+                  <span class="screen-dot"></span>
+                  <span class="screen-dot"></span>
+                  <span class="screen-dot"></span>
+                </div>
+
+                <div class="screen-body">
+                  <p class="eyebrow">Current flow</p>
+                  <h5 id="generated-headline" class="generated-headline"></h5>
+                  <h4 id="journey-title"></h4>
+                  <p id="journey-copy" class="screen-copy"></p>
+                  <div class="generated-metrics">
+                    <article class="generated-metric">
+                      <span class="metric-label">User</span>
+                      <strong id="output-user"></strong>
+                    </article>
+                    <article class="generated-metric">
+                      <span class="metric-label">Main action</span>
+                      <strong id="output-action"></strong>
+                    </article>
+                    <article class="generated-metric">
+                      <span class="metric-label">Outcome</span>
+                      <strong id="output-outcome"></strong>
+                    </article>
+                  </div>
+
+                  <div class="journey-actions">
+                    <button id="prev-step" class="ghost-button" type="button">
+                      Previous
+                    </button>
+                    <button id="next-step" class="primary-button" type="button">
+                      Next Step
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="demo-controls story-card">
+              <h4>Demo controls</h4>
+              <p data-field="demoInstructions"></p>
+              <div class="control-grid">
+                <button class="control-tile" data-mode="customer" type="button">
+                  Customer Journey
+                </button>
+                <button class="control-tile" data-mode="operations" type="button">
+                  Operations View
+                </button>
+                <button class="control-tile" data-mode="impact" type="button">
+                  Impact Snapshot
+                </button>
+              </div>
+              <div class="control-output">
+                <span class="metric-label">Presenter cue</span>
+                <strong id="mode-summary"></strong>
+              </div>
+            </article>
+          </div>
+
+          <div class="generator-layout">
+            <article class="story-card">
+              <h4>Scenario Builder</h4>
+              <p class="builder-copy">
+                Type a possible business idea here. The demo output below will rewrite itself based on your input.
+              </p>
+
+              <form id="scenario-form" class="scenario-form">
+                <label>
+                  Who is the user?
+                  <input
+                    id="scenario-user"
+                    name="user"
+                    type="text"
+                    placeholder="college students, local vendors, hospitals"
+                  />
+                </label>
+                <label>
+                  What problem do they face?
+                  <textarea
+                    id="scenario-problem"
+                    name="problem"
+                    rows="3"
+                    placeholder="Describe the pain point your business is solving"
+                  ></textarea>
+                </label>
+                <label>
+                  What does your solution do?
+                  <textarea
+                    id="scenario-solution"
+                    name="solution"
+                    rows="3"
+                    placeholder="Describe the product, service, or platform"
+                  ></textarea>
+                </label>
+                <label>
+                  What is the main action the user takes?
+                  <input
+                    id="scenario-action"
+                    name="action"
+                    type="text"
+                    placeholder="book a session, request a service, compare options"
+                  />
+                </label>
+                <label>
+                  What outcome do they get?
+                  <input
+                    id="scenario-outcome"
+                    name="outcome"
+                    type="text"
+                    placeholder="save time, get matched, reduce cost, improve access"
+                  />
+                </label>
+                <div class="editor-actions">
+                  <button class="primary-button" type="submit">
+                    Generate Demo
+                  </button>
+                </div>
+              </form>
+            </article>
+
+            <article class="story-card">
+              <h4>Generated Output</h4>
+              <p id="generated-summary" class="builder-output"></p>
+              <div class="output-grid">
+                <article class="output-card">
+                  <span class="metric-label">Problem statement</span>
+                  <p id="generated-problem"></p>
+                </article>
+                <article class="output-card">
+                  <span class="metric-label">Solution statement</span>
+                  <p id="generated-solution"></p>
+                </article>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="market" class="panel">
+          <div class="section-heading">
+            <p class="eyebrow">Section 03</p>
+            <h3>Market Opportunity</h3>
+          </div>
+          <div class="grid-cards">
+            <article class="story-card">
+              <h4>Primary market</h4>
+              <p data-field="market"></p>
+            </article>
+            <article class="story-card">
+              <h4>Customer segments</h4>
+              <p data-field="customers"></p>
+            </article>
+            <article class="story-card">
+              <h4>Competitive edge</h4>
+              <p data-field="competition"></p>
+            </article>
+          </div>
+        </section>
+
+        <section id="business-model" class="panel">
+          <div class="section-heading">
+            <p class="eyebrow">Section 04</p>
+            <h3>How It Makes Money</h3>
+          </div>
+          <div class="two-column">
+            <article class="story-card">
+              <h4>Revenue streams</h4>
+              <p data-field="revenue"></p>
+            </article>
+            <article class="story-card">
+              <h4>Go-to-market</h4>
+              <p data-field="goToMarket"></p>
+            </article>
+          </div>
+        </section>
+
+        <section id="traction" class="panel">
+          <div class="section-heading">
+            <p class="eyebrow">Section 05</p>
+            <h3>Traction and Proof</h3>
+          </div>
+          <div class="grid-cards">
+            <article class="story-card">
+              <h4>Milestones</h4>
+              <p data-field="traction"></p>
+            </article>
+            <article class="story-card">
+              <h4>Partnerships</h4>
+              <p data-field="partnerships"></p>
+            </article>
+            <article class="story-card">
+              <h4>Roadmap</h4>
+              <p data-field="roadmap"></p>
+            </article>
+          </div>
+        </section>
+
+        <section id="impact" class="panel">
+          <div class="section-heading">
+            <p class="eyebrow">Section 06</p>
+            <h3>Community Impact</h3>
+          </div>
+          <article class="story-card impact-card">
+            <h4>Why this matters</h4>
+            <p data-field="impact"></p>
+          </article>
+        </section>
+
+        <section id="team" class="panel">
+          <div class="section-heading">
+            <p class="eyebrow">Section 07</p>
+            <h3>The Team</h3>
+          </div>
+          <div class="two-column">
+            <article class="story-card">
+              <h4>Team strengths</h4>
+              <p data-field="team"></p>
+            </article>
+            <article class="story-card">
+              <h4>Roles</h4>
+              <p data-field="roles"></p>
+            </article>
+          </div>
+        </section>
+
+        <section id="ask" class="panel closing-panel">
+          <div>
+            <p class="eyebrow">Section 08</p>
+            <h3 data-field="askTitle"></h3>
+          </div>
+          <p class="closing-copy" data-field="askBody"></p>
+        </section>
+      </main>
+    </div>
+
+    <aside id="editor-panel" class="editor-panel" aria-hidden="true">
+      <div class="editor-header">
+        <div>
+          <p class="eyebrow">Editor</p>
+          <h3>Update Your Pitch</h3>
+        </div>
+        <button id="close-editor" class="ghost-button" type="button">
+          Close
+        </button>
+      </div>
+
+      <form id="editor-form" class="editor-form">
+        <label>
+          Team / project tag
+          <input name="tagline" type="text" />
+        </label>
+        <label>
+          Venture name
+          <input name="ventureName" type="text" />
+        </label>
+        <label>
+          One-line pitch
+          <textarea name="oneLiner" rows="3"></textarea>
+        </label>
+        <label>
+          Target audience
+          <input name="targetAudience" type="text" />
+        </label>
+        <label>
+          Business model
+          <input name="businessModel" type="text" />
+        </label>
+        <label>
+          Current stage
+          <input name="stage" type="text" />
+        </label>
+        <label>
+          Problem
+          <textarea name="problem" rows="4"></textarea>
+        </label>
+        <label>
+          Why now
+          <textarea name="urgency" rows="3"></textarea>
+        </label>
+        <label>
+          Solution
+          <textarea name="solution" rows="4"></textarea>
+        </label>
+        <label>
+          Value proposition
+          <textarea name="valueProposition" rows="3"></textarea>
+        </label>
+        <label>
+          Demo title
+          <input name="demoTitle" type="text" />
+        </label>
+        <label>
+          Demo instructions
+          <textarea name="demoInstructions" rows="3"></textarea>
+        </label>
+        <label>
+          Mobile app title
+          <input name="mobileAppTitle" type="text" />
+        </label>
+        <label>
+          Mobile intro
+          <textarea name="mobileIntro" rows="3"></textarea>
+        </label>
+        <label>
+          Presenter cue
+          <textarea name="mobilePresenterCue" rows="3"></textarea>
+        </label>
+        <label>
+          Why it works on stage
+          <textarea name="mobileWhyItWorks" rows="3"></textarea>
+        </label>
+        <label>
+          Phone-friendly flow
+          <textarea name="mobileFlow" rows="3"></textarea>
+        </label>
+        <label>
+          QR prompt
+          <input name="qrPrompt" type="text" />
+        </label>
+        <label>
+          Crowd prompt
+          <textarea name="crowdPrompt" rows="3"></textarea>
+        </label>
+        <label>
+          Customer step 1
+          <textarea name="journeyCustomer1" rows="3"></textarea>
+        </label>
+        <label>
+          Customer step 2
+          <textarea name="journeyCustomer2" rows="3"></textarea>
+        </label>
+        <label>
+          Customer step 3
+          <textarea name="journeyCustomer3" rows="3"></textarea>
+        </label>
+        <label>
+          Operations step 1
+          <textarea name="journeyOperations1" rows="3"></textarea>
+        </label>
+        <label>
+          Operations step 2
+          <textarea name="journeyOperations2" rows="3"></textarea>
+        </label>
+        <label>
+          Operations step 3
+          <textarea name="journeyOperations3" rows="3"></textarea>
+        </label>
+        <label>
+          Impact step 1
+          <textarea name="journeyImpact1" rows="3"></textarea>
+        </label>
+        <label>
+          Impact step 2
+          <textarea name="journeyImpact2" rows="3"></textarea>
+        </label>
+        <label>
+          Impact step 3
+          <textarea name="journeyImpact3" rows="3"></textarea>
+        </label>
+        <label>
+          Market opportunity
+          <textarea name="market" rows="3"></textarea>
+        </label>
+        <label>
+          Customer segments
+          <textarea name="customers" rows="3"></textarea>
+        </label>
+        <label>
+          Competitive edge
+          <textarea name="competition" rows="3"></textarea>
+        </label>
+        <label>
+          Revenue streams
+          <textarea name="revenue" rows="3"></textarea>
+        </label>
+        <label>
+          Go-to-market plan
+          <textarea name="goToMarket" rows="3"></textarea>
+        </label>
+        <label>
+          Traction
+          <textarea name="traction" rows="3"></textarea>
+        </label>
+        <label>
+          Partnerships
+          <textarea name="partnerships" rows="3"></textarea>
+        </label>
+        <label>
+          Roadmap
+          <textarea name="roadmap" rows="3"></textarea>
+        </label>
+        <label>
+          Impact
+          <textarea name="impact" rows="4"></textarea>
+        </label>
+        <label>
+          Team strengths
+          <textarea name="team" rows="3"></textarea>
+        </label>
+        <label>
+          Team roles
+          <textarea name="roles" rows="3"></textarea>
+        </label>
+        <label>
+          Closing title
+          <input name="askTitle" type="text" />
+        </label>
+        <label>
+          Closing statement / ask
+          <textarea name="askBody" rows="4"></textarea>
+        </label>
+
+        <div class="editor-actions">
+          <button class="primary-button" type="submit">Save Changes</button>
+        </div>
+      </form>
+    </aside>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
